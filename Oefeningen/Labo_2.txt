@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+/*
+oefening 1
+ Probeer de oefening om te vormen zodat de print functie niet afhankelijk is van de console.log output, maar dat je bijvoorbeeld dynamisch ook naar een alert bericht het gevraagde woord kan sturen.
+
+ function print() {
+            const value = prompt("geef een woord in");            
+            console.log(value)
+        }
+*/
+
+let print = (action) => {
+    const value = prompt("geef een woord in");
+    action(value)
+}
+
+let printToConsole = (zin)=>console.log(zin);
+let printToAlertBox = (zin)=>alert(zin);
+
+print(printToConsole)
+print(printToAlertBox);
+
+/*
+Oefening 2
+Schrijf een functie die 2 argumenten meekrijgt en het kleinste getal teruggeeft. (vb. console.log(min(0,10)) //output 0
+*/
+        const min = (g1,g2)=>{
+            if(g1<g2){
+                return g1;
+            }
+            else
+                return g2;
+        }
+
+        console.log(min(0,10));
+        console.log(min(10,20));
+/*
+Oefening 3
+*/
+
+/*
+Deel 1
+charAt  retourneert het karakter van de gespecifieerde positie.
+length retourneert de lengte van een string
+Maak een functie die het aantal klinkers van een bepaald woord telt
+*/
+let woord = prompt("Geef een woord in")
+
+const telKlinkers = (woord)=>{
+    let count = 0
+    for(let i=0; i<woord.length; i++){
+        if( woord.charAt(i) == "a" || woord.charAt(i) == "e" || 
+            woord.charAt(i) == "i" || woord.charAt(i) == "o" || 
+            woord.charAt(i) == "u" )
+        {
+            count++
+        }
+    }
+    return count
+};
+
+console.log(telKlinkers(woord))
+
+Een andere oplossing (dank u Christophe De Beule!):
+const woord = prompt("Geef je woord in")
+function Klinker_Teller(arr){
+const klinkers = "aeiouAEIOU";
+let klinkerTeller = 0;
+for(let i = 0; i < arr.length ; i++)
+{
+if (klinkers.indexOf(arr[i]) !== -1)
+{
+klinkerTeller += 1;
+}
+}
+return klinkerTeller;
+}
+alert(Klinker_Teller(woord));
+console.log(Klinker_Teller(woord));
+
+
+
+/*
+Deel 2
+Maak een functie die de eerste letter van een woord in een hoofdletter zet (toUpperCase())
+*/
+const zetEersteLetterInUpperCase = (woord)=>{
+    let eersteLetter = woord.slice(0,1)
+    eersteLetter = eersteLetter.toUpperCase() //toUpperCase = built-in functie van javascript
+
+    let deRestVanHetWoord = woord.slice(1,woord.length)
+    return eersteLetter + deRestVanHetWoord
+}
+
+console.log(zetEersteLetterInUpperCase("antwerpen"))
+
+
+/*
+Je kan de oefening uitbreiden door een zin mee te geven, op zoek te gaan naar de woorden (door een spatie), en dan elk woord te laten beginnen met een hoofdletter.
+hiervoor moet je wel arrays begrijpen: een voorbeeld oplossing
+*/
+const woord1 = prompt("Geef een zin in")
+function titleCase(zin) {
+let splitStr = zin.toLowerCase().split(" ");
+for (let i = 0; i < splitStr.length; i++) {
+splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+}
+return splitStr.join(" ");
+}
+alert(titleCase(woord1));
+console.log(titleCase(woord1));
+
+
+/*
+Bean Counting
+*/
+const countBs = (woord)=>{
+    let count = 0;
+    for(let i=0;i<woord.length;i++){
+        if(woord.charAt(i) == "B")
+            count++
+    }
+    return count;
+}
+
+const countChar = (woord,letter)=>{
+    let count = 0;
+    for(let i=0;i<woord.length;i++){
+        if(woord.charAt(i) == letter)
+            count++
+    }
+    return count;
+}
+
+console.log(countBs("BBC"));
+console.log(countChar("kakkerlak", "k"));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* Select the h1 element and set its color to red */
+h1 {
+  color: rgb(20, 26, 16);
+}
+
+/* Select the body element and set its background color to light gray */
+body {
+  background-color: rgb(205, 218, 218);
+}
+
+/* Select the p element and set its font family to Arial */
+p {
+  font-family: Arial;
+}
+
+input[id="text1"] {
+  padding: 10px;
+  border: 5px solid hsl(321, 59%, 45%);
+  border-radius: 10px;
+  width: 40px;
+  position: absolute;
+  top: 390px;
+  left: 800px;
+}
+
+input[id="text2"] {
+  padding: 10px;
+  border: 5px solid hsl(321, 59%, 45%);
+  border-radius: 10px;
+  width: 40px;
+  position: absolute;
+  top: 390px;
+  left: 880px;
+}
+
+button[id="plus"] {
+  padding: 20px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 450px;
+  left: 800px;
+}
+
+button[id="min"] {
+  padding: 20px 25px;
+  background-color: #e61414;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 450px;
+  left: 880px;
+}
+
+button[id="divide"] {
+  padding: 20px 15px;
+  background-color: #8a6a97;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 510px;
+  left: 800px;
+}
+
+button[id="multiply"] {
+  padding: 20px 6px;
+  background-color: #23d88d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 510px;
+  left: 880px;
+}
+
+div[id="result"] {
+  padding: 15px;
+  border: 5px solid hsl(320, 89%, 42%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 160px;
+  position: absolute;
+  top: 70px;
+  left: 5px;
+}
+
+button[id="todo-button"] {
+  padding: 10px 15px;
+  background-color: #4a4d4e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 370px;
+  left: 962px;
+}
+
+input[id="todo-text"] {
+  padding: 8px;
+  border: 2px solid hsl(321, 59%, 45%);
+  border-radius: 15px;
+  width: 250px;
+  position: absolute;
+  top: 370px;
+  left: 690px;
+}
+
+#results {
+  width: 250px;
+  position: absolute;
+  top: 450px;
+  left: 690px;
+}
+
+#results li {
+  list-style-type: none;
+  padding: 8px;
+  border: 2px solid hsl(321, 59%, 45%);
+  border-radius: 15px;
+  width: 250px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+button[id="show"] {
+  padding: 10px 15px;
+  background-color: #9300f5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 78px;
+  left: 962px;
+}
+
+input[id="text"] {
+  padding: 2px;
+  border: 2px solid hsl(321, 59%, 45%);
+  border-radius: 5px;
+  width: 350px;
+  position: absolute;
+  top: 78px;
+  left: 74px;
+}
+
+#header-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: calc(100% - 20px);
+}
+
+#pictures,
+#calculator,
+#page2-link {
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}

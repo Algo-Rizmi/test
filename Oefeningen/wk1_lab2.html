@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .even{
+            background-color: red;
+        }
+        .oneven{
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        const getalVermenigvuldiging = 10;
+        const maxVermenigvuldiging = 10;
+
+        document.write("<table>")
+        for(let i = 1; i <= maxVermenigvuldiging; i++)
+        {
+            if(i%2==0){
+                document.write("<tr class=\"even\">")
+            }
+            else{
+                document.write("<tr class=\"oneven\">")
+            }
+            document.write("<td >")
+                    document.write(i*getalVermenigvuldiging);
+                document.write("</td>")
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

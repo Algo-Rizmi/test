@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        /*
+        Oefening 1
+        */
+//#region Class definition
+        function Summer() {
+            this.amount = 0;
+            this.add = function (input) {
+                this.amount += input;
+            }
+            this.getCurrentSum = function () {
+                return this.amount;
+            }
+        }
+        let s1 = new Summer();
+        let s2 = new Summer();
+
+        s1.add(10);
+        s1.add(20);
+        s2.add(30);
+        s2.add(5);
+        // prints 30
+        console.log(s1.getCurrentSum());
+        // prints 35
+        console.log(s2.getCurrentSum());
+//#endregion
+
+//#region Literal
+        s1 = {
+            amount: 0,
+            add: function (input) {
+                this.amount += input;
+            },
+            getCurrentSum: function () {
+                return this.amount;
+            }
+        }
+        s2 = {
+            amount: 0,
+            add: function (input) {
+                this.amount += input;
+            },
+            getCurrentSum: function () {
+                return this.amount;
+            }
+        }
+
+        s1.add(10);
+        s1.add(20);
+        s2.add(30);
+        s2.add(5);
+        // prints 30
+        console.log(s1.getCurrentSum());
+        // prints 35
+        console.log(s2.getCurrentSum());
+//#endregion
+
+        /*
+        Oefening 2
+        */
+        class Screen {
+
+            constructor(w, h) {
+                this.w = w
+                this.h = h
+            }
+
+            diagonal() {
+                console.log(this.width + " x " + this.height)
+                return Math.sqrt(Math.pow(this.width, 2) + Math.pow(this.height, 2));
+            }
+
+            get width() {
+                return this.w
+            }
+
+            set width(w) {
+                this.w = w
+            }
+
+            get height() {
+                return this.h
+            }
+
+            set height(h) {
+                this.h = h
+            }
+
+            dimensions(definition) {
+                let dimensions = definition.split('x')
+                this.width = parseInt(dimensions[0]);
+                this.height = parseInt(dimensions[1]);
+                console.log(this.height + "x" + this.width)
+            }
+        }
+
+        let screen = new Screen(0, 0);
+        screen.dimensions('500x300');
+        screen.width = 400;
+        console.log(screen.diagonal()); // Should print 500
+
+
+        /*
+        Oefening 3
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+        */
+        function sortByPriceAscending(jsonString) {
+            // Your code goes here
+            let list = JSON.parse(jsonString)
+            console.log(list.sort((a, b) => {
+                if ((a.price - b.price) != 0)
+                    return a.price - b.price
+
+                else {
+
+                    if (a.name < b.name)
+                        return -1
+                    if (a.name > b.name)
+                        return 1
+                    return 0
+                }
+            }))
+        }
+
+        console.log(sortByPriceAscending('[{"name":"eggs","price":1},{"name":"coffee","price":9.99},{"name":"rice","price":4.04},{"name":"abc","price":4.04}]'));
+    </script>
+
+
+
+
+</body>
+
+</html>

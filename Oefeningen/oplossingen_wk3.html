@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+/*
+oef 1
+*/
+
+const voornamen = ["tom","vincent"]
+const geboortejaren = [1900,1950]
+
+const naam = prompt("geef naam in")
+const indexFound = voornamen.findIndex(element => element == naam)
+if(indexFound != -1){
+    alert(geboortejaren[indexFound])
+}
+else{
+    alert("naam not found")
+}
+
+/*
+oef2
+*/
+let todoList = []
+
+function remember(task){
+    todoList.push(task)
+}
+
+function getTask(){
+    return todoList.shift()
+}
+
+function rememberUrgently(task){
+    todoList.unshift(task)
+}
+
+remember("winkelen")
+remember("studeren")
+remember("joggen")
+remember("naar bioscoop")
+remember("meeting")
+
+console.log(todoList)
+
+getTask()
+
+console.log(todoList)
+
+rememberUrgently("boek kopen")
+
+console.log(todoList)
+
+
+/*
+Oefening 3
+*/
+const getallen = [4,2,5,3,4,5,1]
+
+function GetTwoSmallestNumbers(list){
+    if(list.length < 2)
+        return -1
+    
+    let smallestNumbers = []
+    smallestNumbers = getallen.sort().slice(0,2)
+    return smallestNumbers
+}
+
+console.log(GetTwoSmallestNumbers(getallen))
+
+
+/*
+Oefening 4
+*/
+
+const dobbelSteen = ()=>{
+    return Math.round(Math.random()*5)+1
+}
+
+const duizendGetallen = []
+const histogram = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+function GenerateNumbers(){
+    for(let i = 0; i<1000; i++)
+    duizendGetallen[i] = dobbelSteen()+dobbelSteen() //som van 2 dobbelstenen
+}
+
+GenerateNumbers();
+for(let i=0 ; i<duizendGetallen.length; i++){
+    histogram[duizendGetallen[i]] =  histogram[duizendGetallen[i]] + 1
+}
+
+console.log(histogram)
+
+ /*
+Oefening 5
+*/
+const inputZin = prompt("Geef een zin");
+let outputZin = "";
+
+const splitZin = inputZin.split(" ");        
+for(let woord of splitZin)
+{
+    let cappedWoord = woord[0].toUpperCase() + woord.substring(1);
+    outputZin += cappedWoord +" ";
+}
+
+console.log(outputZin);
+</script>
+    
+</body>
+</html>
