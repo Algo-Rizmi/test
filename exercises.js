@@ -186,5 +186,3 @@ function twoSameNumber(nums) {
   }
   return false;
 }
-
-alert("I am here");
