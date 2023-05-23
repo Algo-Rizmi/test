@@ -82,5 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const tr = document.createElement("tr");
     console.log(Object.keys(BOOKS[i]).length);
     console.log(Object.keys(BOOKS[i]));
+
+    for (let j = 0; j < Object.keys(BOOKS[i]).length; j++) {
+      const td = document.createElement("td");
+      let key = Object.keys(element)[j];
+      let text = element[key];
+      td.appendChild(document.createTextNode(text));
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
   }
 });
