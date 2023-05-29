@@ -103,6 +103,3 @@ document.addEventListener("DOMContentLoaded", () => {
     showDiv.textContent = result.join(", ");
   });
 });
-
-
-

@@ -235,16 +235,16 @@ console.log(hoofdLetterText("ik ben een grote man."));
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// const inputZin = prompt("Write here your text: ");
-// let outPutZin = "";
+const inputZin = prompt("Write here your text: ");
+let outPutZin = "";
 
-// const splitZin = inputZin.split(" ");
-// for (let woord of splitZin) {
-//   let cappedWoord = woord[0].toUpperCase() + woord.substring(1);
-//   outPutZin += cappedWoord + " ";
-// }
+const splitZin = inputZin.split(" ");
+for (let woord of splitZin) {
+  let cappedWoord = woord[0].toUpperCase() + woord.substring(1);
+  outPutZin += cappedWoord + " ";
+}
 
-// console.log(outPutZin);
+console.log(outPutZin);
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
